@@ -1,9 +1,13 @@
-package ly.generalassemb.drewmahrt.userinfotabs;
+package ly.generalassemb.drewmahrt.userinfotabs.Adapters;
 
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import ly.generalassemb.drewmahrt.userinfotabs.Classes.ContactFragment;
+import ly.generalassemb.drewmahrt.userinfotabs.Classes.PersonalInfoFragment;
+import ly.generalassemb.drewmahrt.userinfotabs.Classes.PictureFragment;
 
 /**
  * Created by drewmahrt on 2/18/16.
@@ -24,9 +28,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                 PictureFragment tab1 = new PictureFragment();
                 return tab1;
             case 1:
-                //TODO: Add your second tab
+                PersonalInfoFragment tab2 = new PersonalInfoFragment();
+                return tab2;
             case 2:
-                //TODO: Add your third tab
+                ContactFragment tab3 = new ContactFragment();
                 return tab3;
             default:
                 return null;

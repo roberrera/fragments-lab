@@ -1,12 +1,15 @@
 package ly.generalassemb.drewmahrt.userinfotabs;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import ly.generalassemb.drewmahrt.userinfotabs.Adapters.PagerAdapter;
+import ly.generalassemb.drewmahrt.userinfotabs.Classes.PictureFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.commit();
+
     }
 }
